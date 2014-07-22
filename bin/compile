@@ -61,5 +61,7 @@ cat<<\EOF > $BUILD_DIR/.profile.d/pg-path.sh
 PATH=$PATH:$HOME/vendor/postgresql/bin
 EOF
 
+psql ${array[3]} < $BUILD_DIR/lib/db/default_tables/mysql2postgres/gidget.dump
+
 echo "-----> postgresql done"
 
